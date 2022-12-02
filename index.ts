@@ -5,7 +5,7 @@ import { ConnectDB } from "./src/models/schemas/ConnectDB";
 import authRouter from "./src/router/auth.router";
 
 
-const PORT = 5000;
+const port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -30,6 +30,6 @@ app.use(authRouter)
 
 
 
-app.listen(PORT, () => {
-  console.log("App running on port: " + PORT);
+app.listen(port, () => {
+  console.log("App running on port: " + port);
 });
